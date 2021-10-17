@@ -7,7 +7,6 @@ public class Main {
 		int n = sc.nextInt(); // lines
 		int m = sc.nextInt(); // colone
 		int h = 1;
-		int i = 1;
 		int j = 1;
 		String line1 = "";
 		String line2 = "";
