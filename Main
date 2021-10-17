@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt(); // lines
+		int m = sc.nextInt(); // colone
+		int h = 1;
+		int i = 1;
+		int j = 1;
+		String line1 = "";
+		String line2 = "";
+		while (h <= n) {
+			if (h == 1 || h == n) {
+				if (j <= m) {
+					line1 += "*";
+					j++;
+				} else {
+					line1 += "\n";
+					h++;
+					j = 1;
+				}
+			}
+			if (h > 1 && h < n) {
+				if (j == 1 || j == m) {
+					line1 += "*";
+					j++;
+				} else if (j <= m) {
+					line1 += " ";
+					j++;
+				} else {
+					line1 += "\n";
+					h++;
+					j = 1;
+				}
+
+			}
+		}
+
+		System.out.print(line1);
+		System.out.print(line2);
+	}
+
+}
